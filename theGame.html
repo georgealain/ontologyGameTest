@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Open University Ontology Game</title>
+	<meta name="description" content="Ontology Game">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+	<!-- Latest compiled and minified JavaScript -->
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-2.1.0.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+<script>
+function nextStep(currentLevel) {
+	var toHide=document.getElementById(currentLevel);
+	var toShow;
+if (currentLevel=='L1Q1')
+  {
+				if(document.getElementById('Q1option1').checked|| document.getElementById('Q1option2').checked|| document.getElementById('Q1option3').checked|| document.getElementById('Q1option4').checked|| document.getElementById('Q1option5').checked)
+				{
+			 toShow = document.getElementById('L2Q1');
+
+			}
+			else if( document.getElementById('Q1option6').checked)
+			{
+				 toShow = document.getElementById('L2LE');
+			}
+			toHide.style.display = 'none';
+			toShow.style.display = 'block';
+	}
+
+//to add other levels
+}
+
+
+</script>
+
+	<header>
+		<div class="jumbotron">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-4">
+				<h1>Ontology Game</h1>
+				</div>
+
+				<div class="col-sm-4 pull-right">
+				 <a href="" class="thumbnail">
+					 <img src="OULogo.jpg" alt="Temp folder">
+				 </a>
+				</div>
+
+				</div>
+				<h3>This game will help you find the right ontology for your research</h3>
+			</div>
+		</div>
+	</header>
+
+<div id="L1Q1">
+		<div id="Q" class="jumbotron" style="background-color: #003366;">
+			<div class="container">
+			<div class="row"><div class="well" ><span><h3> Why do you want to do research?</h3><span></div></div>
+		</div>
+		</div>
+
+<form action="/new_url" method="POST">
+		<div class="jumbotron" style="background-color: #0066cc;">
+			<div class="container">
+
+														<div class="row">
+															<div class="well"><div class="btn-group" data-toggle="buttons">
+																<label class="btn active">
+																    <input type="radio" name='tempUnit' id="Q1option1" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																		<span> Because I want to find out something</span>
+																  </label>		</div></div></div>
+
+														<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																			<label class="btn active">
+																			    <input type="radio" name='tempUnit' id="Q1option2" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																					<span>Because I want to change something</span>
+																			  </label>		</div></div></div>
+
+															<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																	<label class="btn active">
+																	    <input type="radio" name='tempUnit' id="Q1option3" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																			<span> Because I want to understand something</span>
+																	  </label>		</div></div></div>
+
+																<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																		<label class="btn active">
+																		    <input type="radio" name='tempUnit' id="Q1option4" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																				<span> Because I want to prove something</span>
+																		  </label>		</div></div></div>
+
+																	<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																			<label class="btn active">
+																			    <input type="radio" name='tempUnit' id="Q1option5" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																					<span> Because I want to know something</span>
+																			  </label>		</div></div></div>
+
+																		<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																				<label class="btn active">
+																				    <input type="radio" name='tempUnit' id="Q1option6" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																						<span> Because I want to get a PhD</span>
+																				  </label>		</div></div></div>
+
+<div class="row">
+<a onclick="nextStep('L1Q1')" class="btn btn-success btn-lg">Next</a>
+</div>
+
+		</div>
+
+		</div>
+
+</form>
+</div>
+
+<!------------------------------L2Q1------------------------------->
+<div id="L2Q1" style="display:none">
+		<div id="Q" class="jumbotron" style="background-color: #003366;">
+			<div class="container">
+			<div class="row"><div class="well" ><span><h3> What do you want to find out? choose the most appropriate answer below</h3><span></div></div>
+		</div>
+		</div>
+
+<form action="/new_url" method="POST">
+		<div class="jumbotron" style="background-color: #0066cc;">
+			<div class="container">
+
+														<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																<label class="btn active">
+																    <input type="radio" name='tempUnit' id="Q2option1" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																		<span> Facts </span>
+																  </label>		</div></div></div>
+
+														<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																			<label class="btn active">
+																			    <input type="radio" name='tempUnit' id="Q2option2" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																					<span>Opinions </span>
+																			  </label>		</div></div></div>
+
+															<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																	<label class="btn active">
+																	    <input type="radio" name='tempUnit' id="Q2option3" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																			<span> Perceptions </span>
+																	  </label>		</div></div></div>
+
+																<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																		<label class="btn active">
+																		    <input type="radio" name='tempUnit' id="Q2option3" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																				<span> Behaviour </span>
+																		  </label>		</div></div></div>
+
+																	<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																			<label class="btn active">
+																			    <input type="radio" name='tempUnit' id="Q2option4" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																					<span> Change </span>
+																			  </label>		</div></div></div>
+
+																		<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																				<label class="btn active">
+																				    <input type="radio" name='tempUnit' id="Q2option5" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																						<span> Learning </span>
+																				  </label>		</div></div></div>
+
+																					<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																							<label class="btn active">
+																							    <input type="radio" name='tempUnit' id="Q2option6" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																									<span> Experiences  </span>
+																							  </label>		</div></div></div>
+
+<div class="row">
+<a onclick="nextStep('L2Q1')" class="btn btn-success btn-lg">Next</a>
+</div>
+
+		</div>
+
+		</div>
+
+</form>
+</div>
+
+
+<!-----------------2E----------------------->
+<div id="L2LE" style="display:none">
+	<div id="Q" class="jumbotron" style="background-color: #d61b1b;">
+		<div class="container">
+		<div class="row"><div class="well" ><span><h3> Sorry, you fail the ethics requirements. In times of limited resources your ambition alone is not enough reason to invest in your costly education. But as this is a learning journey, you have one more chance to start.</h3><span></div></div>
+	</div>
+	</div>
+
+</div>
+
+
+
+	<footer>
+		<div class="container">
+			<hr>
+
+			<p>
+				<small><a href="https://www.facebook.com/theopenuniversity/" target="_blank">Like the OU on Facebook</a> On facebook</small></p>
+			<p>	<small><a href="https://twitter.com/OpenUniversity" target="_blank">OU on Twitter </a> On Twitter</small></p>
+			<p>	<small><a href="https://www.youtube.com/user/TheOpenUniversity" target="_blank">The OU on Youtube</a> On Youtube</small>
+
+			</p>
+		</div> <!-- end container -->
+	</footer>
+
+
+</body>
+</html>
