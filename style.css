@@ -34,5 +34,5 @@ div[data-toggle="buttons"] label:active, div[data-toggle="buttons"] label.active
 box-shadow: none;
 }
 small {
-    font-size: smaller;
+    font-size: 100%;
 }
