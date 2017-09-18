@@ -30,6 +30,11 @@ function nextStep(currentLevel) {
 	var toShow;
 if (currentLevel=='L1Q1')
   {
+		if(!document.getElementById('Q1option1').checked|| !document.getElementById('Q1option2').checked|| !document.getElementById('Q1option3').checked|| !document.getElementById('Q1option4').checked|| !document.getElementById('Q1option5').checked)
+		{
+	 break;
+
+	}
 				if(document.getElementById('Q1option1').checked|| document.getElementById('Q1option2').checked|| document.getElementById('Q1option3').checked|| document.getElementById('Q1option4').checked|| document.getElementById('Q1option5').checked)
 				{
 			 toShow = document.getElementById('L2Q1');
