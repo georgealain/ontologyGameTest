@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Open University Ontology Game</title>
+	<meta name="description" content="Ontology Game">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+	<!-- Latest compiled and minified JavaScript -->
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-2.1.0.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+<script>
+function nextStep(currentLevel) {
+	var toHide=document.getElementById(currentLevel);
+	var toShow;
+if (currentLevel=='L1Q1')
+  {
+		if(document.getElementById('Q1option1').checked== false && document.getElementById('Q1option2').checked== false && document.getElementById('Q1option3').checked== false && document.getElementById('Q1option4').checked== false && document.getElementById('Q1option5').checked== false && document.getElementById('Q1option6').checked== false)
+		{
+	 return;
+
+ }
+				if(document.getElementById('Q1option1').checked|| document.getElementById('Q1option2').checked|| document.getElementById('Q1option3').checked|| document.getElementById('Q1option4').checked|| document.getElementById('Q1option5').checked)
+				{
+			 toShow = document.getElementById('L2Q1');
+
+			}
+			else if( document.getElementById('Q1option6').checked)
+			{
+				 toShow = document.getElementById('L2LE');
+			}
+			toHide.style.display = 'none';
+			toShow.style.display = 'block';
+			window.scrollTo(0,0);
+	}
+
+
+	if (currentLevel=='L2Q1')
+	  {
+							if(!document.getElementById('Q2option1').checked && !document.getElementById('Q2option2').checked && !document.getElementById('Q2option3').checked && !document.getElementById('Q2option4').checked && !document.getElementById('Q2option5').checked && !document.getElementById('Q2option6').checked && !document.getElementById('Q2option7').checked)
+							{
+						 return;
+					 }
+
+					 if(document.getElementById('Q2option1').checked || document.getElementById('Q2option4').checked || document.getElementById('Q2option5').checked)
+					 {
+					toShow = document.getElementById('L3Q1');
+
+				 }
+
+				 if(document.getElementById('Q2option2').checked || document.getElementById('Q2option3').checked || document.getElementById('Q2option6').checked || document.getElementById('Q2option7').checked)
+				 {
+				toShow = document.getElementById('L3Q2');
+
+				}
+				toHide.style.display = 'none';
+				toShow.style.display = 'block';
+		}
+
+//to add other levels
+
+if (currentLevel=='L3Q1')
+	{
+						if(!document.getElementById('L3Q1option1').checked && !document.getElementById('L3Q1option2').checked && !document.getElementById('L3Q1option3').checked && !document.getElementById('L3Q1option4').checked && !document.getElementById('L3Q1option5').checked && !document.getElementById('L3Q1option6').checked && !document.getElementById('L3Q1option7').checked)
+						{
+					 return;
+				 }
+
+				 if(document.getElementById('L3Q1option1').checked || document.getElementById('L3Q1option2').checked || document.getElementById('L3Q1option5').checked)//Green
+				 {
+				toShow = document.getElementById('L3.5Green');
+
+				}
+
+				if(document.getElementById('L3Q1option3').checked || document.getElementById('L3Q1option4').checked || document.getElementById('L3Q1option7').checked)//White
+				{
+				toShow = document.getElementById('L3.5White');
+
+				}
+				if(document.getElementById('L3Q1option6').checked)//Red
+				{
+				toShow = document.getElementById('L3.5Red');
+
+				}
+
+				toHide.style.display = 'none';
+				toShow.style.display = 'block';
+	}
+
+	/////////dsfsdfsdf
+
+	if (currentLevel=='L3Q2')
+		{
+							if(!document.getElementById('L3Q2option1').checked && !document.getElementById('L3Q2option2').checked && !document.getElementById('L3Q2option3').checked && !document.getElementById('L3Q2option4').checked && !document.getElementById('L3Q2option5').checked && !document.getElementById('L3Q2option6').checked && !document.getElementById('L3Q2option7').checked)
+							{
+						 return;//nothing selected
+					 }
+
+					 //// No Green Options
+
+					if(document.getElementById('L3Q2option1').checked || document.getElementById('L3Q2option2').checked || document.getElementById('L3Q2option4').checked)//Red
+					{
+					toShow = document.getElementById('L3.5Red');
+
+					}
+					if(document.getElementById('L3Q2option3').checked || document.getElementById('L3Q2option5').checked || document.getElementById('L3Q2option6').checked || document.getElementById('L3Q2option7').checked)//White
+					{
+					toShow = document.getElementById('L3.5White');
+
+					}
+
+					toHide.style.display = 'none';
+					toShow.style.display = 'block';
+		}
+
+		////Red
+		if (currentLevel=='L3.5Red')
+			{
+				toShow = document.getElementById('L2Q1');
+				toHide.style.display = 'none';
+				toShow.style.display = 'block';
+			}
+////White
+			if (currentLevel=='L3.5White')
+				{
+					toShow = document.getElementById('L4Q1');
+					toHide.style.display = 'none';
+					toShow.style.display = 'block';
+				}
+
+				////Green
+							if (currentLevel=='L3.5Green')
+								{
+									toShow = document.getElementById('L4Q1');
+									toHide.style.display = 'none';
+									toShow.style.display = 'block';
+								}
+}
+
+
+</script>
+
+	<header>
+		<div class="jumbotron">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-4">
+				<h1>Test Ontology Game</h1>
+				</div>
+
+				<div class="col-sm-4 pull-right">
+				 <a href="" class="thumbnail">
+					 <img src="OULogo.jpg" alt="Temp folder">
+				 </a>
+				</div>
+
+				</div>
+				<h2>This game will help you find the right ontology for your research</h2>
+			</div>
+		</div>
+	</header>
+
+<div id="L1Q1">
+		<div id="Q" class="jumbotron" style="background-color: #003366;">
+			<div class="container">
+			<div class="row"><div class="well" ><span><h2> Why do you want to do research?</h2><span></div></div>
+		</div>
+		</div>
+
+<form action="/new_url" method="POST">
+		<div class="jumbotron" style="background-color: #0066cc;">
+			<div class="container">
+
+														<div class="row">
+															<div class="well"><div class="btn-group" data-toggle="buttons">
+																<label class="btn active">
+																    <input type="radio" name='tempUnit' id="Q1option1" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																		<span> Because I want to find out something</span>
+																  </label>		</div></div></div>
+
+														<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																			<label class="btn active">
+																			    <input type="radio" name='tempUnit' id="Q1option2" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																					<span>Because I want to change something</span>
+																			  </label>		</div></div></div>
+
+															<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																	<label class="btn active">
+																	    <input type="radio" name='tempUnit' id="Q1option3" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																			<span> Because I want to understand something</span>
+																	  </label>		</div></div></div>
+
+																<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																		<label class="btn active">
+																		    <input type="radio" name='tempUnit' id="Q1option4" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																				<span> Because I want to prove something</span>
+																		  </label>		</div></div></div>
+
+																	<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																			<label class="btn active">
+																			    <input type="radio" name='tempUnit' id="Q1option5" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																					<span> Because I want to know something</span>
+																			  </label>		</div></div></div>
+
+																		<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																				<label class="btn active">
+																				    <input type="radio" name='tempUnit' id="Q1option6" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																						<span> Because I want to get a PhD</span>
+																				  </label>		</div></div></div>
+
+<div class="row">
+<a onclick="nextStep('L1Q1')" style="padding:2% 0; font-size:200%;" class="btn btn-success btn-lg btn-block">Next</a>
+</div>
+
+		</div>
+
+		</div>
+
+</form>
+</div>
+
+<!------------------------------L2Q1------------------------------->
+<div id="L2Q1" style="display:none">
+		<div id="Q" class="jumbotron" style="background-color: #003366;">
+			<div class="container">
+			<div class="row"><div class="well" ><span><h2> What do you want to find out? choose the most appropriate answer below</h2><span></div></div>
+		</div>
+		</div>
+
+<form action="/new_url" method="POST">
+		<div class="jumbotron" style="background-color: #0066cc;">
+			<div class="container">
+
+														<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																<label class="btn active">
+																    <input type="radio" name='tempUnit' id="Q2option1" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																		<span> Facts </span>
+																  </label>		</div></div></div>
+
+														<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																			<label class="btn active">
+																			    <input type="radio" name='tempUnit' id="Q2option2" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																					<span>Opinions </span>
+																			  </label>		</div></div></div>
+
+															<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																	<label class="btn active">
+																	    <input type="radio" name='tempUnit' id="Q2option3" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																			<span> Perceptions </span>
+																	  </label>		</div></div></div>
+
+																<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																		<label class="btn active">
+																		    <input type="radio" name='tempUnit' id="Q2option4" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																				<span> Behaviour </span>
+																		  </label>		</div></div></div>
+
+																	<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																			<label class="btn active">
+																			    <input type="radio" name='tempUnit' id="Q2option5" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																					<span> Change </span>
+																			  </label>		</div></div></div>
+
+																		<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																				<label class="btn active">
+																				    <input type="radio" name='tempUnit' id="Q2option6" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																						<span> Learning </span>
+																				  </label>		</div></div></div>
+
+																					<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																							<label class="btn active">
+																							    <input type="radio" name='tempUnit' id="Q2option7" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																									<span> Experiences  </span>
+																							  </label>		</div></div></div>
+
+<div class="row">
+<a onclick="nextStep('L2Q1')" style="padding:2% 0; font-size:200%;" class="btn btn-success btn-lg btn-block">Next</a>
+</div>
+
+		</div>
+
+		</div>
+
+</form>
+</div>
+
+
+<!-----------------2E----------------------->
+<div id="L2LE" style="display:none">
+	<div id="Q" class="jumbotron" style="background-color: #d61b1b;">
+		<div class="container">
+		<div class="row"><div class="well" ><span><h3> Sorry, you fail the ethics requirements. In times of limited resources your ambition alone is not enough reason to invest in your costly education. But as this is a learning journey, you have one more chance to start.</h3><span></div></div>
+			<div class="row">
+			<a onclick="window.location.href = 'version2.html'" style="padding:2% 0; font-size:200%;" class="btn btn-primary btn-lg btn-block">Start Again</a>
+			</div>
+	</div>
+	</div>
+
+</div>
+
+
+
+
+
+
+<!-----------------L3Q1 (a)----------------------->
+<div id="L3Q1" style="display:none">
+		<div id="Q" class="jumbotron" style="background-color: #003366;">
+			<div class="container">
+			<div class="row"><div class="well" ><span><h2> L3Q1 (a) How do you want to conduct your research?</h2><span></div></div>
+		</div>
+		</div>
+
+<form action="/new_url" method="POST">
+		<div class="jumbotron" style="background-color: #0066cc;">
+			<div class="container">
+
+														<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																<label class="btn active">
+																    <input type="radio" name='tempUnit' id="L3Q1option1" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																		<span> by doing experiment(s)  </span>
+																  </label>		</div></div></div>
+
+														<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																			<label class="btn active">
+																			    <input type="radio" name='tempUnit' id="L3Q1option2" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																					<span>By sending out questionnaire(s) </span>
+																			  </label>		</div></div></div>
+
+															<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																	<label class="btn active">
+																	    <input type="radio" name='tempUnit' id="L3Q1option3" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																			<span> By conducting interview(s) </span>
+																	  </label>		</div></div></div>
+
+																<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																		<label class="btn active">
+																		    <input type="radio" name='tempUnit' id="L3Q1option4" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																				<span> By reading the literature </span>
+																		  </label>		</div></div></div>
+
+																	<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																			<label class="btn active">
+																			    <input type="radio" name='tempUnit' id="L3Q1option5" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																					<span> By observing and taking notes </span>
+																			  </label>		</div></div></div>
+
+																		<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																				<label class="btn active">
+																				    <input type="radio" name='tempUnit' id="L3Q1option6" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																						<span> By initiating action and change </span>
+																				  </label>		</div></div></div>
+
+																					<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																							<label class="btn active">
+																							    <input type="radio" name='tempUnit' id="L3Q1option7" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																									<span> By using at least three of the above methods </span>
+																							  </label>		</div></div></div>
+
+<div class="row">
+<a onclick="nextStep('L3Q1')" style="padding:2% 0; font-size:200%;" class="btn btn-success btn-lg btn-block">Next</a>
+</div>
+
+		</div>
+
+		</div>
+
+</form>
+</div>
+
+
+
+
+
+
+
+
+<!-----------------L3Q2 (b)----------------------->
+<div id="L3Q2" style="display:none">
+		<div id="Q" class="jumbotron" style="background-color: #003366;">
+			<div class="container">
+			<div class="row"><div class="well" ><span><h2>L3Q2 (b) How do you want to conduct your research?</h2><span></div></div>
+		</div>
+		</div>
+
+<form action="/new_url" method="POST">
+		<div class="jumbotron" style="background-color: #0066cc;">
+			<div class="container">
+
+														<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																<label class="btn active">
+																    <input type="radio" name='tempUnit' id="L3Q2option1" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																		<span> by doing experiment(s)  </span>
+																  </label>		</div></div></div>
+
+														<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																			<label class="btn active">
+																			    <input type="radio" name='tempUnit' id="L3Q2option2" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																					<span>By sending out questionnaire(s) </span>
+																			  </label>		</div></div></div>
+
+															<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																	<label class="btn active">
+																	    <input type="radio" name='tempUnit' id="L3Q2option3" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																			<span> By conducting interview(s) </span>
+																	  </label>		</div></div></div>
+
+																<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																		<label class="btn active">
+																		    <input type="radio" name='tempUnit' id="L3Q2option4" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																				<span> By reading the literature </span>
+																		  </label>		</div></div></div>
+
+																	<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																			<label class="btn active">
+																			    <input type="radio" name='tempUnit' id="L3Q2option5" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																					<span> By observing and taking notes </span>
+																			  </label>		</div></div></div>
+
+																		<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																				<label class="btn active">
+																				    <input type="radio" name='tempUnit' id="L3Q2option6" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																						<span> By initiating action and change </span>
+																				  </label>		</div></div></div>
+
+																					<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																							<label class="btn active">
+																							    <input type="radio" name='tempUnit' id="L3Q2option7" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																									<span> By using at least three of the above methods </span>
+																							  </label>		</div></div></div>
+
+<div class="row">
+<a onclick="nextStep('L3Q2')" style="padding:2% 0; font-size:200%;" class="btn btn-success btn-lg btn-block">Next</a>
+</div>
+
+		</div>
+
+		</div>
+
+</form>
+</div>
+
+
+
+<!-----------------3.5 RED----------------------->
+<div id="L3.5Red" style="display:none">
+	<div id="Q" class="jumbotron" style="background-color: #d61b1b;">
+		<div class="container">
+		<div class="row"><div class="well" ><span><h3> Make sure that your method fits your research goal. What you will find out is influenced by the way you collect your data. Go back to Question 2 and start again from there.</h3><span></div></div>
+			<div class="row">
+			<a onclick="nextStep('L3.5Red')" style="padding:2% 0; font-size:200%;" class="btn btn-primary btn-lg btn-block">Go back to question 2</a>
+			</div>
+	</div>
+	</div>
+</div>
+
+<!-----------------3.5 Green----------------------->
+<div id="L3.5Green" style="display:none">
+	<div id="Q" class="jumbotron" style="background-color: #2cc60d;">
+		<div class="container">
+		<div class="row"><div class="well" ><span><h3> Your chosen methods match your research goal. Now you need to decide what it is that you will find at the end of your study.</h3><span></div></div>
+			<div class="row">
+			<a onclick="nextStep('L3.5Green')" style="padding:2% 0; font-size:200%;" class="btn btn-primary btn-lg btn-block">Next</a>
+			</div>
+	</div>
+	</div>
+</div>
+
+<!-----------------3.5 White----------------------->
+<div id="L3.5White" style="display:none">
+	<div id="Q" class="jumbotron" style="background-color: #cfd8cd;">
+		<div class="container">
+		<div class="row"><div class="well" ><span><h3> Your chosen methods might match your research goal well or not so well, depending on what your claims about your findings are. So, now you need to decide what it is that you will find at the end of your study and how you describe your claims for knowledge or outcomes.</h3><span></div></div>
+			<div class="row">
+			<a onclick="nextStep('L3.5White')" style="padding:2% 0; font-size:200%;" class="btn btn-primary btn-lg btn-block">Next</a>
+			</div>
+	</div>
+	</div>
+</div>
+
+<!-----------------L4Q1 ----------------------->
+<div id="L4Q1" style="display:none">
+		<div id="Q" class="jumbotron" style="background-color: #003366;">
+			<div class="container">
+			<div class="row"><div class="well" ><span><h2>What does it mean what you find out? What kind of claims can you make about your findings? Are they valid? relevant? true? meaningful? Choose from the list below</h2><span></div></div>
+		</div>
+		</div>
+
+<form action="/new_url" method="POST">
+		<div class="jumbotron" style="background-color: #0066cc;">
+			<div class="container">
+
+														<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																<label class="btn active">
+																    <input type="radio" name='tempUnit' id="L4Q1option1" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																		<span> Truth</span>
+																  </label>		</div></div></div>
+
+														<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																			<label class="btn active">
+																			    <input type="radio" name='tempUnit' id="L4Q1option2" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																					<span>Understanding </span>
+																			  </label>		</div></div></div>
+
+															<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																	<label class="btn active">
+																	    <input type="radio" name='tempUnit' id="L4Q1option3" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																			<span> Action </span>
+																	  </label>		</div></div></div>
+
+																<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																		<label class="btn active">
+																		    <input type="radio" name='tempUnit' id="L4Q1option4" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																				<span> Change </span>
+																		  </label>		</div></div></div>
+
+																	<div class="row"><div class="well"><div class="btn-group" data-toggle="buttons">
+																			<label class="btn active">
+																			    <input type="radio" name='tempUnit' id="L4Q1option5" value="celcius" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i>
+																					<span> Power </span>
+																			  </label>		</div></div></div>
+
+
+<div class="row">
+<a onclick="nextStep('L4Q1')" style="padding:2% 0; font-size:200%;" class="btn btn-success btn-lg btn-block">Next</a>
+</div>
+
+		</div>
+
+		</div>
+
+</form>
+</div>
+
+
+
+
+<!-----------------Footer ----------------------->
+	<footer>
+		<div class="container">
+			<hr>
+
+			<p>
+				<a style="font-size:large;" href="https://www.facebook.com/theopenuniversity/" target="_blank">Like the OU on Facebook</a></p>
+			<p>	<large><a style="font-size:large;" href="https://twitter.com/OpenUniversity" target="_blank">The OU on Twitter </a></large></p>
+			<p>	<large><a style="font-size:large;" href="https://www.youtube.com/user/TheOpenUniversity" target="_blank">The OU on Youtube</a></large>
+
+			</p>
+		</div> <!-- end container -->
+	</footer>
+
+
+</body>
+</html>
